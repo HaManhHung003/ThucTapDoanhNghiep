@@ -5,7 +5,9 @@ import GuestRoute from '@/components/common/GuestRoute';
 import LoginPage from '@/pages/LoginPage';
 import DashboardPage from '@/pages/DashboardPage';
 import ProductsPage from '@/pages/ProductsPage';
-import ComingSoonPage from '@/pages/ComingSoonPage';
+import OrdersPage from '@/pages/OrdersPage';
+import CustomersPage from '@/pages/CustomersPage';
+import SettingsPage from '@/pages/SettingsPage';
 import NotFoundPage from '@/pages/NotFoundPage';
 
 export default function App() {
@@ -22,9 +24,9 @@ export default function App() {
           <Route index element={<DashboardPage />} />
           <Route path="dashboard" element={<Navigate to="/" replace />} />
           <Route path="products" element={<ProductsPage />} />
-          <Route path="orders" element={<ComingSoonPage title="Đơn hàng" />} />
-          <Route path="customers" element={<ComingSoonPage title="Khách hàng" />} />
-          <Route path="settings" element={<ComingSoonPage title="Cài đặt" />} />
+          <Route path="orders" element={<OrdersPage />} />
+          <Route path="customers" element={<CustomersPage />} />
+          <Route path="settings" element={<SettingsPage />} />
         </Route>
       </Route>
 
@@ -32,4 +34,3 @@ export default function App() {
     </Routes>
   );
 }
-
